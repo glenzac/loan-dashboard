@@ -28,12 +28,20 @@ def create_app(config=None):
     app.config['SESSION_COOKIE_SAMESITE'] = 'Lax'
     app.config['SESSION_COOKIE_SECURE'] = False  # Set to True in production with HTTPS
 
+    # Database configuration
+    app.config['DATABASE_PATH'] = os.path.join(os.path.dirname(__file__), 'loan_dashboard.db')
+    app.config['BACKUP_DIR'] = os.path.join(os.path.dirname(__file__), 'backups')
+
     # Apply custom config if provided
     if config:
         app.config.update(config)
 
     # Initialize extensions
     Session(app)
+
+    # Initialize database
+    from database import init_app as db_init_app
+    db_init_app(app)
 
     # Register blueprints
     from blueprints.dashboard import dashboard_bp
