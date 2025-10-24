@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - Loan Dashboard{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row mb-4">
+        <div class="col">
+            <h1 class="display-5 fw-bold">
+                <i class="bi bi-graph-up"></i> Dashboard
+            </h1>
+            <p class="lead text-muted">Overview of your loan portfolio</p>
+        </div>
+    </div>
+
+    <!-- Phase 1 Placeholder -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card shadow-sm">
+                <div class="card-body p-5 text-center">
+                    <i class="bi bi-graph-up" style="font-size: 5rem; color: #0d6efd;"></i>
+                    <h2 class="mt-4">Dashboard Coming Soon</h2>
+                    <p class="lead text-muted">
+                        The dashboard will be fully implemented in <strong>Phase 4</strong> with:
+                    </p>
+                    <div class="row mt-4">
+                        <div class="col-md-3">
+                            <div class="p-3 bg-light rounded">
+                                <h5>📊 Key Metrics</h5>
+                                <small class="text-muted">Total outstanding, monthly EMI, interest paid</small>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="p-3 bg-light rounded">
+                                <h5>🏦 Loan Cards</h5>
+                                <small class="text-muted">Summary cards for each active loan</small>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="p-3 bg-light rounded">
+                                <h5>📈 Visualizations</h5>
+                                <small class="text-muted">Payment timeline, pie charts, comparisons</small>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="p-3 bg-light rounded">
+                                <h5>🎯 Quick Actions</h5>
+                                <small class="text-muted">Add loan, record payment, view reports</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-success mt-5" role="alert">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <strong>Phase 1 Complete!</strong> The Flask foundation is ready.
+                        Database integration comes next in Phase 2.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

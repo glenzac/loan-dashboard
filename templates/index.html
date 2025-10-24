@@ -1,0 +1,136 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Loan Dashboard{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center mt-5">
+        <div class="col-lg-10">
+            <!-- Hero Section -->
+            <div class="text-center mb-5">
+                <h1 class="display-3 fw-bold text-primary">
+                    <i class="bi bi-piggy-bank-fill"></i> Loan Dashboard
+                </h1>
+                <p class="lead text-muted fs-4">
+                    Personal Loan Monitoring & Management Tool
+                </p>
+                <hr class="my-4 w-50 mx-auto">
+                <p class="fs-5">
+                    Track your loans, manage payments, and optimize your prepayment strategy - all in one place.
+                </p>
+            </div>
+
+            <!-- Feature Cards -->
+            <div class="row g-4 mb-5">
+                <div class="col-md-6">
+                    <div class="card h-100 shadow-sm hover-card">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon mb-3">
+                                <i class="bi bi-graph-up text-primary" style="font-size: 3rem;"></i>
+                            </div>
+                            <h5 class="card-title fw-bold">📊 Track Multiple Loans</h5>
+                            <p class="card-text text-muted">
+                                Monitor all your loans in one place with comprehensive analytics and insights.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card h-100 shadow-sm hover-card">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon mb-3">
+                                <i class="bi bi-credit-card text-success" style="font-size: 3rem;"></i>
+                            </div>
+                            <h5 class="card-title fw-bold">💳 Manage Payments</h5>
+                            <p class="card-text text-muted">
+                                Record and track payment history with automatic principal/interest breakdown.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card h-100 shadow-sm hover-card">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon mb-3">
+                                <i class="bi bi-graph-up-arrow text-warning" style="font-size: 3rem;"></i>
+                            </div>
+                            <h5 class="card-title fw-bold">📈 Forecast Scenarios</h5>
+                            <p class="card-text text-muted">
+                                Simulate different prepayment strategies and compare interest savings.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card h-100 shadow-sm hover-card">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon mb-3">
+                                <i class="bi bi-file-earmark-bar-graph text-info" style="font-size: 3rem;"></i>
+                            </div>
+                            <h5 class="card-title fw-bold">📑 Generate Reports</h5>
+                            <p class="card-text text-muted">
+                                Export data to Excel/CSV and create detailed year-wise summaries.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Features List -->
+            <div class="row mb-5">
+                <div class="col-md-6">
+                    <div class="card bg-light border-0">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold mb-3">
+                                <i class="bi bi-bank text-primary"></i> Loan Management
+                            </h5>
+                            <ul class="list-unstyled">
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Home, Personal, and Auto loans</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Fixed and Floating interest rates</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Partial disbursement tracking</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Multiple payment frequencies</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card bg-light border-0">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold mb-3">
+                                <i class="bi bi-calculator text-primary"></i> Advanced Features
+                            </h5>
+                            <ul class="list-unstyled">
+                                <li><i class="bi bi-check-circle-fill text-success"></i> EMI calculation & amortization schedules</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Prepayment impact analysis</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Interest rate change tracking</li>
+                                <li><i class="bi bi-check-circle-fill text-success"></i> Automated balance recalculation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="text-center mb-5">
+                <a href="{{ url_for('dashboard.index') }}" class="btn btn-primary btn-lg px-5 py-3 shadow">
+                    Get Started <i class="bi bi-arrow-right ms-2"></i>
+                </a>
+                <p class="text-muted mt-3">
+                    <i class="bi bi-shield-check"></i> All data stored locally on your machine
+                </p>
+            </div>
+
+            <!-- Phase 1 Status Badge -->
+            <div class="alert alert-info text-center" role="alert">
+                <i class="bi bi-info-circle-fill"></i>
+                <strong>Phase 1 Complete!</strong> Foundation and navigation are ready.
+                Additional features will be added in subsequent phases.
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
